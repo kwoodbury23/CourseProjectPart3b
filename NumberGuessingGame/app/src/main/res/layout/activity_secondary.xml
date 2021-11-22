@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondaryActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="90dp"
+        android:layout_height="729dp"
+        android:background="#E10707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Game"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="74dp"
+            android:onClick="goToGame"
+            android:text="Main"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/Preferences"
+            android:onClick="goToPreferences"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="120dp"
+            android:text="Preferences" />
+
+        <TextView
+            android:id="@+id/Help"
+            android:onClick="goToHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="166dp"
+            android:text="Help" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="270dp"
+        android:layout_height="92dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <EditText
+        android:id="@+id/numberGuess"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/message"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/guess"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberGuess"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Guess"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29" />
+
+    <TextView
+        android:id="@+id/guessNumber"
+        android:layout_width="254dp"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:text="Guess a number 1-25"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
